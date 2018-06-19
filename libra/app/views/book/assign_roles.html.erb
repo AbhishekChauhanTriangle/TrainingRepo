@@ -1,0 +1,18 @@
+<h3>This Page Assigns Role to Users.</h3>
+<% if can? :assign_roles, Roleuser %>
+<% anyMoreUsers = true %>
+<%= form_tag book_add_assign_roles_path do %>
+	<% @users.each do |user| %>
+		<% if !(@hash.keys.include? user.id) %>
+			<% anyMoreUsers = false %>
+			<p> <%= user.email %>: 
+			<%= select_tag "user_id[#{user.id}][]", options_from_collection_for_select(@roles,'role_id', 'role_type')%>
+		<% end %>
+	<% end %>
+	<% if anyMoreUsers == true %> 
+		<p> ADMIN, You are all cought up, No More Users to Assign Role </p>
+	<% end %> 
+	<br><br>
+	<%= submit_tag 'Assign Role' %>
+<% end %>
+<% end %>

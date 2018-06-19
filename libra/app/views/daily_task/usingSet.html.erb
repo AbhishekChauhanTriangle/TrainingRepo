@@ -1,0 +1,14 @@
+<h2>This shows Sets Application in View</h2>
+
+<p>First Set <% @i.each do |var| %> <%= var %> <% end %> </p>
+<p>Second Set <% @j.each do |var| %> <%= var %> <% end %></p>
+
+
+<p>Common Set <%= @common.size %></p>
+<p>Difference Set <% @diff.each do |var| %> <%= var %> <% end %></p>
+<p>Are they Equal <%= @bool %></p>
+<p>Third Set <% @z.each do |var| %> <%= var %> <% end %></p>
+<p>IsContains Set <%= @isContains %></p>
+<p>Exclusive Set <% @excl.each do |var| %> <%= var %> <% end %></p>
+<p>Cleared Set Set <% if @z.any? %><%= @z %> <% else %> Z has no elements  <% end %> </p>
+<p>Are They Disjoint Set <%= @disjoint %></p>

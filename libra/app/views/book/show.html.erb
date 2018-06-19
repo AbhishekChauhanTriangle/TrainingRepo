@@ -1,0 +1,16 @@
+<h2> This is Page to Show the Records as per given ID</h2>
+<h3><%= @book.title %></h3>
+
+<div>
+	Price:
+	<%= @book.price %> <br>
+	Subject
+	<%= @book.subject_id %><br>
+	<strong>Subject: </strong> <%= link_to @book.subject.name, :action => "show_subjects", :id => @book.subject.id %><br />
+	Description
+	<%= @book.description %><br>
+	Created At
+	<%= @book.created_at %><br>
+</div>
+
+<%= link_to "Back", {:action => 'list'} %>

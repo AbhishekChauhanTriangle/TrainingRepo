@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+   <head>
+      <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+      <meta http-equiv = "Content-Language" content = "en-us" />
+      <title>Library Info System</title>
+      <%= stylesheet_link_tag "st" %>
+   </head>
+
+   <body id = "library">
+      <div id = "container">
+         
+         <div id = "header">
+            <h1>Library Info System</h1>
+            <h3>Library powered by TravelTriangle.com </h3>
+            <h4>Come and let us have you a world class travel Experience</h4>
+            <p style='color:red;' class="notice"><%= notice %></p>
+            <p style='color:red;' class="alert"><%= alert %></p>
+         </div>
+
+
+         
+         <% if user_signed_in? %> 
+            <span> Welcome <b><%= current_user.email.split("@")[0] %></b></span>
+            
+            <% if current_user.roleusers.blank? == false %>
+               <% if can? :assign_subject, UserSubject %>
+                  <%= link_to 'Assign Subjects', book_assign_subject_path%>
+               <% end %>
+               <% if can? :assign_roles, Roleuser %>
+                  <%= link_to 'Assign Roles', book_assign_roles_path%>
+               <% end %>
+               <%if current_user.roleusers.first.roles_id == 1  %>
+                  <span> [ADMIN] </span>
+               <% elsif current_user.roleusers.first.roles_id == 2 %>
+                  <span> [STUDENT] </span>
+               <% else %> 
+                  <span> [TEACHER] </span>
+               <% end %>
+            <% end %> 
+            <span style='text-align: right; color:red;'> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </span>   
+         <% else %> 
+            <span style='text-align: right; color:red;'> <%= link_to 'SIGN UP', '/users/sign_up' %> </span>
+            <span style='text-align: right; color:red;'> <%= link_to 'SIGN IN', '/users/sign_in' %> </span>
+         <% end %>
+         <%= render 'search/form' %>
+         <div id = "content">
+            <%= yield -%>
+         </div>
+
+         <div id = "sidebar"></div>
+         
+      </div>
+   </body>
+   
+</html>

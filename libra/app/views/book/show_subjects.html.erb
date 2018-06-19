@@ -1,0 +1,16 @@
+<h2> This will show all subjects. </h2>
+<h2> <%= @subject.name  %> </h2>
+<% if @subject.books.any? %> 
+<ul>
+	<% @subject.books.each do |c| %> 
+	<li>
+		<%= link_to c.title, :action => "show", :id => c.id %> 
+		<span style='text-align: right;float:right;'> <%= link_to "Mail to Owner @ " + c.user.email, :action => "sendMail", :mail => c.user.email %> </span>
+		<%= @z %>
+	</li>
+	<% end %>
+</ul>
+<% else %> 
+<p> There are no books with this subject currently </p>
+<% end %>
+<%= link_to "Back", {:action => 'list'} %>

@@ -1,0 +1,9 @@
+
+<h2>This Page Assigns Subjects to Teachers.</h2>
+<%= form_tag  book_add_assign_subject_path  do  %>
+	<%@users.each do |user|%>
+			<p><%=user.email%>:  
+			<%= select_tag "user_id[#{user.id}][]", options_from_collection_for_select(Subject.all, 'id', 'name'), multiple: true%>
+	<%end%>	
+	<%= submit_tag 'Assign Subject' %><br><br>
+<%end%>
