@@ -146,7 +146,6 @@ class BookController < ApplicationController
     
     def sendMail
         var = params[:mail]
-        binding.pry
         HardWorker.perform_async(var)
         redirect_to :back, :alert => 'Email is on its way'
     end

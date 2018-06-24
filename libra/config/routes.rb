@@ -49,4 +49,7 @@ Libra::Application.routes.draw do
   get 'polymorphic/viewTeacherPerLab'
   post 'polymorphic/AssignTeacherPerLab'
 
+  get 'join/index'
+  get 'include/index'
+
 end

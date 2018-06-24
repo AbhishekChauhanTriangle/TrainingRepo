@@ -1,0 +1,35 @@
+
+<h2>All about Include Query in rails. PreLoad + EagerLoad - Country Poland</h2>
+
+<span style = "color:red"><b> These are Values from Eager Load Table. </b></span> 
+
+<% @eager_load.each do |q| %> 
+	<p><%= q.id %>  <%= q.email %>
+	<% q.addresses.each do |o| %> 
+		<%= o.country %> 
+	<% end %>
+	</p>
+<% end %>
+
+
+
+<span style = "color:red"><b> These are Values from Include Table, with Not all Users Addresses </b></span>
+<% @include_no_good.each do |q| %> 
+	<p><%= q.id %>  <%= q.email %>
+	<% q.addresses.each do |o| %> 
+		<%= o.country %> 
+	<% end %>
+	</p>
+<% end %>
+</p>
+
+
+<span style = "color:red"><b> These are Values from Include Table, with all Users Addresses </b></span>
+
+<% @preload_good.each do |q| %> 
+	<p><%= q.id %>  <%= q.email %>
+	<% q.addresses.each do |o| %> 
+		<%= o.country %> 
+	<% end %></p>
+<% end %>
+</p>

@@ -1,0 +1,23 @@
+<h2>This Illustrates all JOIN's</h2>
+
+
+<div> 
+	<span style = "color:red"><b> These are Values from JOIN Table. </b></span> 
+<% @products_join_category.each do |q| %> 
+<p> ID - <%= q.id %> and Name - <%= q.name %> </p>
+<% end %>
+</div>
+
+<div> <span style = "color:red"><b>Disjoint Values </b> </span>
+<% @products_not_joined_category_id.each do |q| %> 
+<p> ID - <%= q.id %>
+<% end %>
+
+<% @products_not_joined_category_name.each do |q| %> 
+Name - <%= q.name %> 
+<% end %>
+
+<% @products_not_joined_category_quantity.each do |q| %> 
+ Quantity - <%= q.quantity %> </p>
+<% end %>
+</div>

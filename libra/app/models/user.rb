@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
   has_one :role, through: :roleusers
   has_many :user_subjects
   has_and_belongs_to_many :forums
+  has_many :addresses, dependent: :destroy
 end

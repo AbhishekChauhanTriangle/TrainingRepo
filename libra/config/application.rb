@@ -61,6 +61,10 @@ module Libra
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.logger = Logger.new(STDOUT)
+    
+    config.logger = Logger.new("Application Log")
   end
 end
 

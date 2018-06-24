@@ -1,0 +1,651 @@
+# Logfile created on 2018-06-24 23:53:05 +0530 by logger.rb/56438
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (5.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+  [1m[35m (22.2ms)[0m  CREATE TABLE `categories` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624182305')[0m
+Migrating to CreateProducts (20180624182315)
+  [1m[35m (21.7ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `quantity` int(11), `category_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624182315')[0m
+  [1m[35m (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Mysql2::Error: Duplicate entry '5' for key 'PRIMARY': INSERT INTO `products` (`category_id`, `created_at`, `id`, `name`, `quantity`, `updated_at`) VALUES (NULL, '2018-06-24 18:32:02', 5, 'Karishma', 1, '2018-06-24 18:32:02')
+Mysql2::Error: Duplicate entry '5' for key 'PRIMARY': INSERT INTO `products` (`category_id`, `created_at`, `id`, `name`, `quantity`, `updated_at`) VALUES (NULL, '2018-06-24 18:32:06', 5, 'Karishma', 1, '2018-06-24 18:32:06')
+Mysql2::Error: Duplicate entry '5' for key 'PRIMARY': INSERT INTO `products` (`category_id`, `created_at`, `id`, `name`, `quantity`, `updated_at`) VALUES (NULL, '2018-06-24 18:32:08', 5, 'Karishma', 1, '2018-06-24 18:32:08')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+Migrating to CreateAddresses (20180624185229)
+  [1m[35m (34.8ms)[0m  CREATE TABLE `addresses` (`id` int(11) auto_increment PRIMARY KEY, `country` varchar(255), `city` varchar(255), `postal_code` varchar(255), `street` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624185229')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Mysql2::Error: Incorrect string value: '\xC5\x82aw' for column 'city' at row 1: INSERT INTO `addresses` (`city`, `country`, `created_at`, `postal_code`, `street`, `updated_at`) VALUES ('Wrocław', 'Poland', '2018-06-24 19:05:02', '55-555', 'Rynek', '2018-06-24 19:05:02')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+Migrating to CreateAddresses (20180624185229)
+Migrating to AddUserIdToAddress (20180624191414)
+  [1m[35m (81.3ms)[0m  ALTER TABLE `addresses` ADD `user_id` int(11)
+  [1m[36m (3.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624191414')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to AddUserIdToAddress (20180624191414)
+  [1m[36m (31.4ms)[0m  [1mALTER TABLE `addresses` DROP `user_id`[0m
+  [1m[35m (1.4ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180624191414'
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateAddresses (20180624185229)
+  [1m[36m (51.2ms)[0m  [1mDROP TABLE `addresses`[0m
+  [1m[35m (2.6ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180624185229'
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+Migrating to CreateAddresses (20180624185229)
+  [1m[35m (41.6ms)[0m  CREATE TABLE `addresses` (`id` int(11) auto_increment PRIMARY KEY, `country` varchar(255), `city` varchar(255), `postal_code` varchar(255), `street` varchar(255), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624185229')[0m
+  [1m[35m (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateAddresses (20180624185229)
+  [1m[36m (26.8ms)[0m  [1mDROP TABLE `addresses`[0m
+  [1m[35m (3.4ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180624185229'
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+Migrating to CreateAddresses (20180624185229)
+  [1m[35m (42.2ms)[0m  CREATE TABLE `addresses` (`id` int(11) auto_increment PRIMARY KEY, `country` varchar(255), `city` varchar(255), `postal_code` varchar(255), `street` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624185229')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Mysql2::Error: Unknown column 'addresses.user_id' in 'where clause': SELECT `addresses`.* FROM `addresses`  WHERE `addresses`.`user_id` = 1
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateAddresses (20180624185229)
+  [1m[36m (29.0ms)[0m  [1mDROP TABLE `addresses`[0m
+  [1m[35m (3.3ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180624185229'
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateBooks (20180608083446)
+Migrating to CreateSubjects (20180608083631)
+Migrating to Books (20180608084610)
+Migrating to Subjects (20180608084638)
+Migrating to DeviseCreateUsers (20180612145048)
+Migrating to AddUserIdToBooks (20180613044102)
+Migrating to CreateRoles (20180613053422)
+Migrating to Roleusers (20180613055636)
+Migrating to CreateUserSubjects (20180613105919)
+Migrating to CreateTeachingAssistants (20180624091315)
+Migrating to CreateLabs (20180624091756)
+Migrating to CreateCourses (20180624093724)
+Migrating to CreateForums (20180624095030)
+Migrating to CreateForumsUsersJoin (20180624095654)
+Migrating to CreateCategories (20180624182305)
+Migrating to CreateProducts (20180624182315)
+Migrating to CreateAddresses (20180624185229)
+  [1m[35m (39.5ms)[0m  CREATE TABLE `addresses` (`id` int(11) auto_increment PRIMARY KEY, `country` varchar(255), `city` varchar(255), `postal_code` varchar(255), `street` varchar(255), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180624185229')[0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Mysql2::Error: Incorrect string value: '\xC5\x82aw' for column 'city' at row 1: INSERT INTO `addresses` (`city`, `country`, `created_at`, `postal_code`, `street`, `updated_at`, `user_id`) VALUES ('Wrocław', 'Poland', '2018-06-24 19:28:38', '55-555', 'Rynek', '2018-06-24 19:28:38', 1)
+Connecting to database specified by database.yml
+
+
+Started GET "/join/index" for 127.0.0.1 at 2018-06-25 01:24:04 +0530
+Processing by JoinController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `categories` ON `categories`.`id` = `products`.`category_id`
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT id FROM `products` WHERE `products`.`category_id` IS NULL[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT name FROM `products` WHERE `products`.`category_id` IS NULL
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT quantity FROM `products` WHERE `products`.`category_id` IS NULL[0m
+  Rendered join/index.html.erb within layouts/standard (25.3ms)
+  [1m[35mRoleuser Load (0.3ms)[0m  SELECT `roleusers`.* FROM `roleusers` WHERE `roleusers`.`user_id` = 2
+  Rendered search/_form.html.erb (1.0ms)
+Completed 200 OK in 17214.2ms (Views: 71.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:24:22 +0530
+Processing by IncludeController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` = 1
+  Rendered include/index.html.erb within layouts/application (325396.7ms)
+Completed 500 Internal Server Error in 325399.1ms
+
+ActionView::Template::Error (exit):
+    1: 
+    2: <h2>All about Include Query in rails. PreLoad + EagerLoad - Country Poland</h2>
+    3: 
+    4: <span style = "color:red"><b> These are Values from Eager Load Table. </b></span> 
+    5: <p>
+    6: <% @eager_load.each do |q| %> 
+    7: 	<%= q.id %>  <%= q.email %>
+  app/views/include/index.html.erb:4:in `block in _app_views_include_index_html_erb__3774113874908725376_39593600'
+  app/views/include/index.html.erb:3:in `_app_views_include_index_html_erb__3774113874908725376_39593600'
+
+
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.9ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Processing by IncludeController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` IN (1)
+  Rendered include/index.html.erb within layouts/application (31.2ms)
+Compiled include.css  (2ms)  (pid 13277)
+Compiled application.css  (5ms)  (pid 13277)
+Compiled include.js  (185ms)  (pid 13277)
+Compiled application.js  (188ms)  (pid 13277)
+Completed 200 OK in 280.9ms (Views: 267.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/include.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /include.css - 200 OK (5ms)
+
+
+Started GET "/assets/include.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /include.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/daily_task.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /daily_task.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/book.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /book.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /forum.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/polymorphic.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /polymorphic.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /search.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/st.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /st.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/join.css?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /join.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/book.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /book.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/daily_task.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /daily_task.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/forum.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /forum.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/join.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /join.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/polymorphic.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /polymorphic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /search.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2018-06-25 01:30:01 +0530
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:30:40 +0530
+Processing by IncludeController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  Rendered include/index.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 19.4ms
+
+ActionView::Template::Error (exit):
+    4: <span style = "color:red"><b> These are Values from Eager Load Table. </b></span> 
+    5: <p>
+    6: <% @eager_load.each do |q| %> 
+    7: 	<% binding.pry %>
+    8: 	<%= q.id %>  <%= q.email %>
+    9: 	<% q.addresses.each do |o| %> 
+    10: 		<%= o.country %> 
+  app/views/include/index.html.erb:7:in `block in _app_views_include_index_html_erb__3774113874908725376_43932100'
+  app/views/include/index.html.erb:6:in `_app_views_include_index_html_erb__3774113874908725376_43932100'
+
+
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:31:01 +0530
+Processing by IncludeController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(DISTINCT `users`.`id`) FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+Mysql2::Error: Incorrect string value: '\xC5\x82aw' for column 'city' at row 1: INSERT INTO `addresses` (`city`, `country`, `created_at`, `postal_code`, `street`, `updated_at`, `user_id`) VALUES ('Wrocław', 'Poland', '2018-06-24 20:02:16', '55-555', 'Rynek', '2018-06-24 20:02:16', 2)
+  Rendered include/index.html.erb within layouts/application (89080.2ms)
+Completed 500 Internal Server Error in 89082.0ms
+
+ActionView::Template::Error (exit):
+    4: <span style = "color:red"><b> These are Values from Eager Load Table. </b></span> 
+    5: <p>
+    6: <% @eager_load.each do |q| %> 
+    7: 	<% binding.pry %>
+    8: 	<%= q.id %>  <%= q.email %>
+    9: 	<% q.addresses.each do |o| %> 
+    10: 		<%= o.country %> 
+  app/views/include/index.html.erb:7:in `block in _app_views_include_index_html_erb__3774113874908725376_40198100'
+  app/views/include/index.html.erb:6:in `_app_views_include_index_html_erb__3774113874908725376_40198100'
+
+
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/ttlaptop0636/.rvm/gems/ruby-2.3.4/gems/actionpack-3.2.22.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Processing by IncludeController#index as HTML
+  [1m[35mSQL (0.4ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` IN (1, 2)[0m
+  Rendered include/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 17.3ms (Views: 15.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/daily_task.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /daily_task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /book.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /include.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /join.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/polymorphic.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /polymorphic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/st.css?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /st.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /book.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daily_task.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /daily_task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /forum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /include.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /join.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/polymorphic.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /polymorphic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2018-06-25 01:32:43 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Processing by IncludeController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mAddress Load (0.2ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` IN (1, 2)[0m
+  Rendered include/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 33.3ms (Views: 30.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /book.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daily_task.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /daily_task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /include.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/polymorphic.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /polymorphic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /join.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/st.css?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /st.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /book.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daily_task.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /daily_task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /forum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /include.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /join.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/polymorphic.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /polymorphic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2018-06-25 01:33:49 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Processing by IncludeController#index as HTML
+  [1m[35mSQL (0.9ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` IN (1, 2)[0m
+  Rendered include/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 28.5ms (Views: 24.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daily_task.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /daily_task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /forum.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /book.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /join.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /include.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/polymorphic.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /polymorphic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/st.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /st.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/book.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /book.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/daily_task.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /daily_task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forum.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /forum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/include.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /include.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/join.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /join.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/polymorphic.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /polymorphic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2018-06-25 01:34:06 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/include/index" for 127.0.0.1 at 2018-06-25 01:34:26 +0530
+Processing by IncludeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` LEFT OUTER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`encrypted_password` AS t0_r2, `users`.`reset_password_token` AS t0_r3, `users`.`reset_password_sent_at` AS t0_r4, `users`.`remember_created_at` AS t0_r5, `users`.`sign_in_count` AS t0_r6, `users`.`current_sign_in_at` AS t0_r7, `users`.`last_sign_in_at` AS t0_r8, `users`.`current_sign_in_ip` AS t0_r9, `users`.`last_sign_in_ip` AS t0_r10, `users`.`created_at` AS t0_r11, `users`.`updated_at` AS t0_r12, `addresses`.`id` AS t1_r0, `addresses`.`country` AS t1_r1, `addresses`.`city` AS t1_r2, `addresses`.`postal_code` AS t1_r3, `addresses`.`street` AS t1_r4, `addresses`.`user_id` AS t1_r5, `addresses`.`created_at` AS t1_r6, `addresses`.`updated_at` AS t1_r7 FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `addresses` ON `addresses`.`user_id` = `users`.`id` WHERE (addresses.country = 'Poland')[0m
+  [1m[35mAddress Load (0.2ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE `addresses`.`user_id` IN (1, 2)
+  Rendered include/index.html.erb within layouts/standard (11.7ms)
+  [1m[36mRoleuser Load (0.2ms)[0m  [1mSELECT `roleusers`.* FROM `roleusers` WHERE `roleusers`.`user_id` = 2[0m
+  Rendered search/_form.html.erb (0.3ms)
+Completed 200 OK in 52.1ms (Views: 27.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/st.css?body=1" for 127.0.0.1 at 2018-06-25 01:34:26 +0530
+Served asset /st.css - 304 Not Modified (0ms)

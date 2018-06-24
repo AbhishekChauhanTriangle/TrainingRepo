@@ -7,6 +7,14 @@ class UserMailer < ActionMailer::Base
          body: "Hello " + @mail_to + " Sir, Your Book Has been Viewed in Library",
          content_type: "text/html",
          subject: "YOur Book Has Been Viewed")
-  end
+ 	 end
 
+
+ 	 def custom_email(body, subject)
+		@mail_to = "abhichauhan119@gmail.com"
+    	mail(to: @mail_to,
+         body: "Hello " + @mail_to + body,
+         content_type: "text/html",
+         subject: subject)
+ 	 end
 end
