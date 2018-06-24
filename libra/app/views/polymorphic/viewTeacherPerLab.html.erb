@@ -1,0 +1,11 @@
+<h2>You can select all Labs per teacher.</h2>
+
+<%= form_tag polymorphic_AssignTeacherPerLab_path do %>
+	<% @ta.each do |user| %>	
+		<p> <%= user.name %>: 
+		<%= select_tag "user_id[#{user.id}][]", options_from_collection_for_select(@lab,'id', 'name')%>
+		
+	<% end %>
+	<br><br>
+	<%= submit_tag 'Assign Lab' %>
+<% end %>

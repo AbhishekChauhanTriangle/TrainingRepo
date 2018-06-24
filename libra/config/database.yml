@@ -8,7 +8,7 @@ development:
   database: depo_development
   host: localhost
   username: root
-  password: "your_password"
+  password: ""
   pool: 5
   timeout: 5000
 
@@ -20,7 +20,7 @@ test:
   database: depo_test
   host: localhost
   username: root
-  password: "your_password"
+  password: ""
   pool: 5
   timeout: 5000
 
@@ -29,6 +29,6 @@ production:
   database: depo_production
   host: localhost
   username: root
-  password: "your_password"
+  password: ""
   pool: 5
   timeout: 5000

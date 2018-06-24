@@ -1,0 +1,13 @@
+<% if can? :viewUsers, Forum %>
+<h2>Displaying all users for <%= Forum.find_by_id(@forum_id).name %></h2>
+ 
+<% if @users.count == 0 %>
+	<p> No Users are subscribed </p>
+<% else %>
+	<% @users.each do |user| %> 
+		<p><%= user.email %></p>
+	<% end %>
+<% end %>
+
+<%= link_to "Back", :back %>
+<% end %>

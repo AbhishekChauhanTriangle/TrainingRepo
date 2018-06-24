@@ -25,7 +25,7 @@ Libra::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true, 
     user_name: 'abhichauhan119@gmail.com',
-    password: 'Your_Password'
+    password: ''
 
   }
 

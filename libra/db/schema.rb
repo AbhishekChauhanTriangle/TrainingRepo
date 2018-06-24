@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180613105919) do
+ActiveRecord::Schema.define(:version => 20180624095654) do
 
   create_table "books", :force => true do |t|
     t.integer  "subject_id",                :null => false
@@ -20,6 +20,30 @@ ActiveRecord::Schema.define(:version => 20180613105919) do
     t.text     "description",               :null => false
     t.datetime "created_at",                :null => false
     t.integer  "user_id"
+  end
+
+  create_table "courses", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "forums", :force => true do |t|
+    t.string   "name"
+    t.boolean  "public"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "forums_users", :force => true do |t|
+    t.integer "forum_id"
+    t.integer "user_id"
+  end
+
+  create_table "labs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "roles", :id => false, :force => true do |t|
@@ -32,8 +56,37 @@ ActiveRecord::Schema.define(:version => 20180613105919) do
     t.integer "roles_id"
   end
 
+  create_table "students", :force => true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "students_teachers", :force => true do |t|
+    t.integer "teacher_id"
+    t.integer "student_id"
+  end
+
+  add_index "students_teachers", ["student_id"], :name => "index_students_teachers_on_student_id"
+  add_index "students_teachers", ["teacher_id"], :name => "index_students_teachers_on_teacher_id"
+
   create_table "subjects", :force => true do |t|
     t.string "name", :null => false
+  end
+
+  create_table "teachers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "teaching_assistants", :force => true do |t|
+    t.string   "name"
+    t.integer  "ta_duty_id"
+    t.string   "ta_duty_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "user_subjects", :force => true do |t|

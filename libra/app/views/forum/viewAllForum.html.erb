@@ -1,0 +1,11 @@
+<% if can? :viewAllForum, Forum %>
+<h2>All Forums Page</h2>
+
+<% @forum.each do |f| %> 
+	<p> <%= f.name %>
+	<%= link_to "View Users", {:action => "viewUsers", :id => f.id} %>
+	</p>
+<% end %>
+
+<%= link_to "Back", :back %>
+<% end %>

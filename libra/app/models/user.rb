@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   has_many :roleusers
   has_one :role, through: :roleusers
   has_many :user_subjects
+  has_and_belongs_to_many :forums
 end

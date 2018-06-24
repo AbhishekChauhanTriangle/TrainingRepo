@@ -1,0 +1,13 @@
+<h2>You are on Forum Page, Please add yourself to Forum</h2>
+
+
+<% @forum.each do |i| %>
+	<p><b>	Forum ID & Name -<%= i.id %>   <%= i.name %> </b>
+	<% if current_user.forums.exists?(i.id) %> 
+		<span style="color:violet;font-size:15pt"><b> Already Assigned to Forum </b></span>
+	<% else %> 
+		<%= link_to "Assign Me to Forum", {:action => "assign", :id => i.id} %>
+	<% end %></p>
+<% end %>
+
+<%= link_to "Back", :root %>

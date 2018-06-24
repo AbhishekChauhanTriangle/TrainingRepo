@@ -17,6 +17,9 @@ class Ability
         can :show_subjects, Subject
         can :add_assign_roles, Roleuser
         can :add_assign_subject, UserSubject
+        can :viewAllForum, Forum
+        can :viewUsers, Forum
+        
       elsif user.roleusers.first.roles_id == 2
         cannot :assign_subject, UserSubject
         cannot :assign_roles, Roleuser

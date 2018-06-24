@@ -1,0 +1,12 @@
+<h2>You can select all Course per teacher.</h2>
+
+
+<%= form_tag polymorphic_assignTeacherPerCourse_path do %>
+	<% @ta.each do |user| %>	
+		<p> <%= user.name %>: 
+		<%= select_tag "user_id[#{user.id}][]", options_from_collection_for_select(@course,'id', 'name')%>
+		
+	<% end %>
+	<br><br>
+	<%= submit_tag 'Assign Course' %>
+<% end %>

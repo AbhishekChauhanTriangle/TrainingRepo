@@ -37,4 +37,16 @@ Libra::Application.routes.draw do
   
   root :to => 'book#list'
   get "search", to: "search#search"
+
+
+  get 'forum/index'
+  get 'forum/assign'
+  get 'forum/viewAllForum'
+  get 'forum/viewUsers'
+
+  get 'polymorphic/viewTeacherPerCourse'
+  post 'polymorphic/assignTeacherPerCourse'
+  get 'polymorphic/viewTeacherPerLab'
+  post 'polymorphic/AssignTeacherPerLab'
+
 end
